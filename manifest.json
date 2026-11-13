@@ -1,15 +1,15 @@
 {
   "pluginId": "google-flow",
-  "name": "Google Flow",
+  "name": "Flow Google",
   "publisher": "2noScript",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "contractVersion": 1,
   "providers": [
     {
       "providerId": "FLOW_GOOGLE",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "contractVersion": 1,
-      "name": "Google Flow",
+      "name": "Flow Google",
       "auth": {
         "kind": "WEBVIEW",
         "loginUrl": "https://flow.google.com/",
@@ -258,7 +258,9 @@
         "https://lh3.googleusercontent.com",
         "https://aisandbox-pa.googleapis.com",
         "https://labs.google"
-      ]
+      ],
+      "logoUrl": "https://cdn.jsdelivr.net/gh/T2Bamboo/w-resources-icos@main/icos/flow.google.png",
+      "websiteUrl": "https://flow.google.com/"
     }
   ]
 }
