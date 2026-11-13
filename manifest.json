@@ -2,12 +2,12 @@
   "pluginId": "google-flow",
   "name": "Flow Google",
   "publisher": "2noScript",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "contractVersion": 1,
   "providers": [
     {
       "providerId": "FLOW_GOOGLE",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "contractVersion": 1,
       "name": "Flow Google",
       "auth": {
@@ -257,7 +257,8 @@
         "https://storage.googleapis.com",
         "https://lh3.googleusercontent.com",
         "https://aisandbox-pa.googleapis.com",
-        "https://labs.google"
+        "https://labs.google",
+        "https://flow-content.google"
       ],
       "logoUrl": "https://cdn.jsdelivr.net/gh/T2Bamboo/w-resources-icos@main/icos/flow.google.png",
       "websiteUrl": "https://flow.google.com/"
