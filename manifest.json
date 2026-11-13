@@ -1,0 +1,264 @@
+{
+  "pluginId": "google-flow",
+  "name": "Google Flow",
+  "publisher": "2noScript",
+  "version": "0.1.0",
+  "contractVersion": 1,
+  "providers": [
+    {
+      "providerId": "FLOW_GOOGLE",
+      "version": "0.1.0",
+      "contractVersion": 1,
+      "name": "Google Flow",
+      "auth": {
+        "kind": "WEBVIEW",
+        "loginUrl": "https://flow.google.com/",
+        "navigationOrigins": [
+          "https://flow.google.com",
+          "https://accounts.google.com"
+        ],
+        "pageOrigins": [
+          "https://flow.google.com"
+        ],
+        "identityProvider": "GOOGLE"
+      },
+      "accountFields": [
+        {
+          "id": "projectUrl",
+          "label": "Project URL",
+          "type": "TEXT",
+          "required": true
+        },
+        {
+          "id": "proxyUrl",
+          "label": "HTTP proxy URL",
+          "type": "TEXT"
+        }
+      ],
+      "operations": {
+        "IMAGE": {
+          "transport": "HTTP",
+          "models": [
+            {
+              "id": "GEM_PIX_2",
+              "label": "Nano Banana Pro"
+            },
+            {
+              "id": "NARWHAL",
+              "label": "Nano Banana 2"
+            },
+            {
+              "id": "HARBOR_SEAL",
+              "label": "Nano Banana 2 Lite"
+            },
+            {
+              "id": "IMAGEN_3",
+              "label": "Imagen 3 Standard"
+            }
+          ],
+          "fields": [
+            {
+              "id": "ratio",
+              "label": "Aspect ratio",
+              "type": "SELECT",
+              "required": true,
+              "choices": [
+                "1:1",
+                "9:16",
+                "16:9",
+                "3:4",
+                "4:3"
+              ]
+            },
+            {
+              "id": "seed",
+              "label": "Seed",
+              "type": "NUMBER"
+            }
+          ]
+        },
+        "VIDEO": {
+          "transport": "HTTP",
+          "models": [
+            {
+              "id": "veo_3_1_i2v_lite_low_priority",
+              "label": "Veo 3.1 Lite (Low Priority)"
+            },
+            {
+              "id": "veo_3_1_i2v_lite",
+              "label": "Veo 3.1 Lite"
+            },
+            {
+              "id": "veo_3_1_i2v_s_fast",
+              "label": "Veo 3.1 Fast"
+            },
+            {
+              "id": "veo_3_1_i2v_s_fast_ultra",
+              "label": "Veo 3.1 Fast Ultra"
+            }
+          ],
+          "fields": [
+            {
+              "id": "ratio",
+              "label": "Aspect ratio",
+              "type": "SELECT",
+              "required": true,
+              "choices": [
+                "9:16",
+                "16:9"
+              ]
+            },
+            {
+              "id": "duration",
+              "label": "Duration (seconds)",
+              "type": "NUMBER",
+              "default": 5
+            },
+            {
+              "id": "resolution",
+              "label": "Resolution",
+              "type": "SELECT",
+              "choices": [
+                "720p",
+                "1080p"
+              ]
+            }
+          ]
+        },
+        "CHARACTER": {
+          "transport": "HTTP",
+          "models": [
+            {
+              "id": "GEM_PIX_2",
+              "label": "Nano Banana Pro"
+            },
+            {
+              "id": "NARWHAL",
+              "label": "Nano Banana 2"
+            },
+            {
+              "id": "HARBOR_SEAL",
+              "label": "Nano Banana 2 Lite"
+            },
+            {
+              "id": "IMAGEN_3",
+              "label": "Imagen 3 Standard"
+            }
+          ],
+          "fields": [
+            {
+              "id": "ratio",
+              "label": "Aspect ratio",
+              "type": "SELECT",
+              "required": true,
+              "choices": [
+                "1:1",
+                "9:16",
+                "16:9",
+                "3:4",
+                "4:3"
+              ]
+            },
+            {
+              "id": "seed",
+              "label": "Seed",
+              "type": "NUMBER"
+            }
+          ]
+        },
+        "PROP": {
+          "transport": "HTTP",
+          "models": [
+            {
+              "id": "GEM_PIX_2",
+              "label": "Nano Banana Pro"
+            },
+            {
+              "id": "NARWHAL",
+              "label": "Nano Banana 2"
+            },
+            {
+              "id": "HARBOR_SEAL",
+              "label": "Nano Banana 2 Lite"
+            },
+            {
+              "id": "IMAGEN_3",
+              "label": "Imagen 3 Standard"
+            }
+          ],
+          "fields": [
+            {
+              "id": "ratio",
+              "label": "Aspect ratio",
+              "type": "SELECT",
+              "required": true,
+              "choices": [
+                "1:1",
+                "9:16",
+                "16:9",
+                "3:4",
+                "4:3"
+              ]
+            },
+            {
+              "id": "seed",
+              "label": "Seed",
+              "type": "NUMBER"
+            }
+          ]
+        },
+        "ENVIRONMENT": {
+          "transport": "HTTP",
+          "models": [
+            {
+              "id": "GEM_PIX_2",
+              "label": "Nano Banana Pro"
+            },
+            {
+              "id": "NARWHAL",
+              "label": "Nano Banana 2"
+            },
+            {
+              "id": "HARBOR_SEAL",
+              "label": "Nano Banana 2 Lite"
+            },
+            {
+              "id": "IMAGEN_3",
+              "label": "Imagen 3 Standard"
+            }
+          ],
+          "fields": [
+            {
+              "id": "ratio",
+              "label": "Aspect ratio",
+              "type": "SELECT",
+              "required": true,
+              "choices": [
+                "1:1",
+                "9:16",
+                "16:9",
+                "3:4",
+                "4:3"
+              ]
+            },
+            {
+              "id": "seed",
+              "label": "Seed",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      "requestOrigins": [
+        "https://flow.google.com"
+      ],
+      "mediaOrigins": [
+        "https://flow.google.com",
+        "https://storage.googleapis.com",
+        "https://lh3.googleusercontent.com",
+        "https://aisandbox-pa.googleapis.com",
+        "https://labs.google"
+      ]
+    }
+  ]
+}
