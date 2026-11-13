@@ -7,6 +7,7 @@ import { FlowGoogleService } from "./provider";
 import { runProvider } from "./adapter";
 import { connectionFromHost } from "./connection";
 import manifest from "../manifest.json";
+import { readFlowSession, executeFlowChallenge } from "./session";
 
 const packageManifest = pluginManifestSchema.parse(manifest);
 
@@ -14,7 +15,7 @@ const provider = defineProvider({
   manifest: packageManifest.providers[0],
   async checkConnection(host) {
     try {
-      await host.session("flow.auth");
+      await readFlowSession(host);
       return { status: "CONNECTED" };
     } catch {
       return {
@@ -27,13 +28,15 @@ const provider = defineProvider({
     const profile = connectionFromHost(host);
     const provider = new FlowGoogleService(
       {
-        getFlowAuthContext: () => host.session("flow.auth"),
+        getFlowAuthContext: () => readFlowSession(host),
         solveRecaptcha: (_profile, key, action) =>
-          host.session("flow.captcha", [key ?? "", action ?? ""]),
+          executeFlowChallenge(host, key ?? "", action ?? ""),
       },
       (url, options) =>
         host.request<string>({
           url,
+          transport: "BROWSER",
+          proxy: options.proxy,
           method: options.method,
           headers: options.headers,
           body:

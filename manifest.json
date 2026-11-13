@@ -2,16 +2,16 @@
   "pluginId": "google-flow",
   "name": "Flow Google",
   "publisher": "2noScript",
-  "version": "0.1.2",
-  "contractVersion": 1,
+  "version": "0.2.0",
+  "contractVersion": 2,
   "providers": [
     {
       "providerId": "FLOW_GOOGLE",
-      "version": "0.1.2",
-      "contractVersion": 1,
+      "version": "0.2.0",
+      "contractVersion": 2,
       "name": "Flow Google",
       "auth": {
-        "kind": "WEBVIEW",
+        "kind": "BROWSER",
         "loginUrl": "https://flow.google.com/",
         "navigationOrigins": [
           "https://flow.google.com",
@@ -28,16 +28,11 @@
           "label": "Project URL",
           "type": "TEXT",
           "required": true
-        },
-        {
-          "id": "proxyUrl",
-          "label": "HTTP proxy URL",
-          "type": "TEXT"
         }
       ],
       "operations": {
         "IMAGE": {
-          "transport": "HTTP",
+          "transport": "BROWSER",
           "models": [
             {
               "id": "GEM_PIX_2",
@@ -78,7 +73,7 @@
           ]
         },
         "VIDEO": {
-          "transport": "HTTP",
+          "transport": "BROWSER",
           "models": [
             {
               "id": "veo_3_1_i2v_lite_low_priority",
@@ -126,7 +121,7 @@
           ]
         },
         "CHARACTER": {
-          "transport": "HTTP",
+          "transport": "BROWSER",
           "models": [
             {
               "id": "GEM_PIX_2",
@@ -167,7 +162,7 @@
           ]
         },
         "PROP": {
-          "transport": "HTTP",
+          "transport": "BROWSER",
           "models": [
             {
               "id": "GEM_PIX_2",
@@ -208,7 +203,7 @@
           ]
         },
         "ENVIRONMENT": {
-          "transport": "HTTP",
+          "transport": "BROWSER",
           "models": [
             {
               "id": "GEM_PIX_2",
